@@ -20,7 +20,14 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV1, GovernorBravoE
       * @param token_ The address of the token
       * @param votingPeriod_ The initial voting period
       * @param votingDelay_ The initial voting delay
-      * @param proposalThreshold_ The initial proposal threshold
+      * @param MIN_PROPOSAL_THRESHOLD_ The min proposal threshold
+      * @param MAX_PROPOSAL_THRESHOLD_ The max proposal threshold
+      * @param MIN_VOTING_PERIOD_ The max voting period
+      * @param MAX_VOTING_PERIOD_ The max voting period
+      * @param MIN_VOTING_DELAY_ The min voting delay
+      * @param MAX_VOTING_DELAY_ The max voting delay
+      * @param quorumVotes_ The quorum votes
+      * @param proposalMaxOperations_ The proposal max operations 
       */
     function initialize(
         address timelock_, 
