@@ -68,6 +68,30 @@ contract GovernorBravoDelegatorStorage {
  */
 contract GovernorBravoDelegateStorageV1 is GovernorBravoDelegatorStorage {
 
+    /// @notice The minimum setable proposal threshold
+    uint public MIN_PROPOSAL_THRESHOLD = 50000e18; // 50,000 Token
+
+    /// @notice The maximum setable proposal threshold
+    uint public MAX_PROPOSAL_THRESHOLD = 100000e18; //100,000 Token
+
+    /// @notice The minimum setable voting period
+    uint public MIN_VOTING_PERIOD = 5760; // About 24 hours
+
+    /// @notice The max setable voting period
+    uint public MAX_VOTING_PERIOD = 80640; // About 2 weeks
+
+    /// @notice The min setable voting delay
+    uint public MIN_VOTING_DELAY = 1;
+
+    /// @notice The max setable voting delay
+    uint public MAX_VOTING_DELAY = 40320; // About 1 week
+
+    /// @notice The number of votes in support of a proposal required in order for a quorum to be reached and for a vote to succeed
+    uint public quorumVotes = 400000e18; // 400,000 = 4% of Token
+
+    /// @notice The maximum number of actions that can be included in a proposal
+    uint public proposalMaxOperations = 10; // 10 actions
+
     /// @notice The delay before voting on a proposal may take place, once proposed, in blocks
     uint public votingDelay;
 
