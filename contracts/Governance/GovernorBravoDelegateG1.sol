@@ -4,7 +4,7 @@ pragma experimental ABIEncoderV2;
 import "./GovernorBravoInterfaces.sol";
 
 contract GovernorBravoDelegate is GovernorBravoDelegateStorageV1, GovernorBravoEvents {
-    //From Compound
+    //Thanks Compound
     /// @notice The name of this contract
     string public constant name = "Governor Bravo";
 
