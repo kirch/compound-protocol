@@ -29,6 +29,8 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV1, GovernorBravoE
     uint votingDelay_, 
     uint proposalThreshold_,
     uint MIN_PROPOSAL_THRESHOLD_,
+    uint MAX_PROPOSAL_THRESHOLD_,
+    uint MIN_VOTING_PERIOD_,
     uint MAX_VOTING_PERIOD_,
     uint MIN_VOTING_DELAY_,
     uint MAX_VOTING_DELAY_,
@@ -48,9 +50,9 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV1, GovernorBravoE
         votingPeriod = votingPeriod_;
         votingDelay = votingDelay_;
         proposalThreshold = proposalThreshold_;
-        MIN_PROPOSAL_THRESHOLD = 50000e18; 
-        MAX_PROPOSAL_THRESHOLD = 100000e18;
-        MIN_VOTING_PERIOD = MIN_PROPOSAL_THRESHOLD_;
+        MIN_PROPOSAL_THRESHOLD = MIN_PROPOSAL_THRESHOLD_; 
+        MAX_PROPOSAL_THRESHOLD = MAX_PROPOSAL_THRESHOLD_;
+        MIN_VOTING_PERIOD = MIN_VOTING_PERIOD_;
         MAX_VOTING_PERIOD = MAX_VOTING_PERIOD_;
         MIN_VOTING_DELAY = MIN_VOTING_DELAY_;
         MAX_VOTING_DELAY = MAX_VOTING_DELAY_;
