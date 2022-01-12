@@ -23,19 +23,19 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV1, GovernorBravoE
       * @param proposalThreshold_ The initial proposal threshold
       */
     function initialize(
-    address timelock_, 
-    address token_, 
-    uint votingPeriod_, 
-    uint votingDelay_, 
-    uint proposalThreshold_,
-    uint MIN_PROPOSAL_THRESHOLD_,
-    uint MAX_PROPOSAL_THRESHOLD_,
-    uint MIN_VOTING_PERIOD_,
-    uint MAX_VOTING_PERIOD_,
-    uint MIN_VOTING_DELAY_,
-    uint MAX_VOTING_DELAY_,
-    uint quorumVotes_,
-    uint proposalMaxOperations_,
+        address timelock_, 
+        address token_, 
+        uint votingPeriod_, 
+        uint votingDelay_, 
+        uint proposalThreshold_,
+        uint MIN_PROPOSAL_THRESHOLD_,
+        uint MAX_PROPOSAL_THRESHOLD_,
+        uint MIN_VOTING_PERIOD_,
+        uint MAX_VOTING_PERIOD_,
+        uint MIN_VOTING_DELAY_,
+        uint MAX_VOTING_DELAY_,
+        uint quorumVotes_,
+        uint proposalMaxOperations_
     ) public {
         require(address(timelock) == address(0), "GovernorBravo::initialize: can only initialize once");
         require(msg.sender == admin, "GovernorBravo::initialize: admin only");
